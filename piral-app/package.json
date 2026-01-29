@@ -9,6 +9,7 @@
     "piral": "^1.6.1",
     "piral-base": "^1.6.1",
     "piral-core": "^1.6.1",
+    "piral-forms": "^1.9.2",
     "react": "^18",
     "react-dom": "^18",
     "react-router": "^5",
@@ -17,6 +18,7 @@
   "scripts": {
     "start": "piral debug",
     "build": "piral build",
+    "build-emulator": "piral build --type emulator",
     "postinstall": "piral declaration"
   },
   "app": "./src/index.html",

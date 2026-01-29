@@ -17,6 +17,19 @@
             "composer/installers": true,
             "silverstripe/recipe-plugin": true,
             "silverstripe/vendor-plugin": true
+        },
+        "preferred-install": {
+            "silverstripe/*": "source",
+            "silverstripe-themes/*": "source",
+            "creative-commoners/*": "source",
+            "symbiote/*": "source",
+            "tractorcow/*": "source",
+            "dnadesign/*": "source",
+            "bringyourownideas/*": "source",
+            "colymba/*": "source",
+            "cwp/*": "source",
+            "guysartorelli/*": "source",
+            "*/*": "dist"
         }
     },
     "minimum-stability": "dev",
@@ -39,7 +52,9 @@
         "expose": [
             "piral-app/dist/release",
             "piral-module-one/dist",
-            "piral-module-two/dist"
+            "piral-module-two/dist",
+            "piral-module-form/dist",
+            "piral-module-form-textarea/dist"
         ],
         "resources-dir": "_resources"
     }
