@@ -1,34 +1,13 @@
 {
-    "name": "silverstripe/platform-project",
-    "description": "The SilverStripe Platform base project / installer.",
+    "name": "microfrontend/test",
     "require": {
         "php": "^8.3",
-        "dnadesign/silverstripe-elemental": "^5.2",
-        "jonom/focuspoint": "^5",
-        "jonom/silverstripe-betternavigator": "^6",
-        "kinglozzer/metatitle": "^3",
-        "silverstripe-terraformers/keys-for-cache": "^2",
-        "silverstripe/auditor": "^3",
-        "silverstripe/crontask": "^3",
-        "silverstripe/dynamodb": "^5",
-        "silverstripe/elemental-bannerblock": "^3.2",
-        "silverstripe/environmentcheck": "^3",
-        "silverstripe/linkfield": "^4",
-        "silverstripe/raygun": "^4",
-        "silverstripe/recipe-cms": "^5.2",
-        "silverstripe/redirectedurls": "^3",
-        "silverstripe/sharedraftcontent": "^3",
-        "silverstripe/totp-authenticator": "^5",
-        "wilr/silverstripe-googlesitemaps": "^3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.6",
-        "silverstripeltd/bespoke-standards": "^1.0"
+        "silverstripe/recipe-cms": "^6",
+        "silverstripe/startup-theme": "^1"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/src/",
-            "App\\Tests\\": "app/tests/"
+            "App\\": "app/src/"
         }
     },
     "config": {
@@ -37,32 +16,11 @@
         "allow-plugins": {
             "composer/installers": true,
             "silverstripe/recipe-plugin": true,
-            "silverstripe/vendor-plugin": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true
+            "silverstripe/vendor-plugin": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {
-        "silverstripe-standards": [
-            "@php-lint",
-            "@phpcs",
-            "yarn lint"
-        ],
-        "dev-build": [
-            "sake dev/build flush=1"
-        ],
-        "test": [
-            "@test-phpunit"
-        ],
-        "test-phpunit": "phpunit -d memory_limit=512M -d flush=1",
-        "test-phpunit-coverage": "phpunit -d memory_limit=512M -d flush=1 --coverage-html=coverage --coverage-clover=coverage.xml",
-        "php-lint": "bespoke-phplint",
-        "phpcs": "bespoke-phpcs",
-        "phpcbf": "bespoke-phpcbf",
-        "phpcs-fix": "@phpcbf"
-    },
     "extra": {
         "project-files-installed": [
             ".htaccess",

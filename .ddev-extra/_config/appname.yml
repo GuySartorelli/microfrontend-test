@@ -1,0 +1,9 @@
+---
+Name: ddev-extra-appname
+---
+SilverStripe\Admin\LeftAndMain:
+  application_name: 'microfrontend-test'
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    appname: DevTools\Extension\SiteConfigExtension

@@ -1,6 +1,6 @@
-name: microfrontend
+name: microfrontend-test
 type: silverstripe
-docroot: .
+docroot: public
 php_version: "8.3"
 webserver_type: apache-fpm
 xdebug_enabled: false
@@ -8,16 +8,15 @@ additional_hostnames: []
 additional_fqdns: []
 database:
     type: mysql
-    version: "8.0"
-upload_dirs:
-    - public/assets
-project_tld: local
+    version: "8.4"
 use_dns_when_possible: true
+webimage_extra_packages: ['php${DDEV_PHP_VERSION}-tidy']
 timezone: Pacific/Auckland
 composer_version: "2"
 disable_settings_management: true
 web_environment: []
-nodejs_version: "20.0.0"
+nodejs_version: "auto"
+corepack_enable: false
 
 # Key features of DDEV's config.yaml:
 

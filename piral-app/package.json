@@ -6,9 +6,9 @@
     "piral"
   ],
   "dependencies": {
-    "piral": "1.6.1",
-    "piral-base": "1.6.1",
-    "piral-core": "1.6.1",
+    "piral": "^1.6.1",
+    "piral-base": "^1.6.1",
+    "piral-core": "^1.6.1",
     "react": "^18",
     "react-dom": "^18",
     "react-router": "^5",

@@ -1,0 +1,13 @@
+---
+Name: ddev-extra-error-logging
+---
+SilverStripe\Core\Injector\Injector:
+  # Logging from "default" logger (includes uncaught exceptions and PHP errors)
+  Psr\Log\LoggerInterface:
+    calls:
+      LogFileHandler: [ pushHandler, [ '%$LogFileHandler' ] ]
+  LogFileHandler:
+    class: Monolog\Handler\StreamHandler
+    constructor:
+      - "/var/www/html/.ddev-extra/silverstripe.log"
+      - "debug"
