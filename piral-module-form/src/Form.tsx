@@ -16,7 +16,7 @@ export default ({ piral, formData, submitting, changeForm }) => {
         }} />
         <piral.Extension name="CheckboxComponent" params={{
           name: 'vue-field',
-          value: formData.tickthis,
+          value: formData['vue-field'],
           title: 'Vue field',
           changeForm,
         }} />

@@ -11,7 +11,7 @@ export function setup(app: PiletApi) {
       // @TODO pull this in from Silverstripe app
       title: '123',
       description: 'abc',
-      tickthis: 1,
+      'vue-field': true,
     },
     onSubmit(data) {
       // @TODO submit to Silverstripe app
