@@ -17,6 +17,7 @@
   },
   "scripts": {
     "start": "piral debug",
+    "dev": "NODE_ENV=development pilet build",
     "build": "piral build",
     "build-emulator": "piral build --type emulator",
     "postinstall": "piral declaration"

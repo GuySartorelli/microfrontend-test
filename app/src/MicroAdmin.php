@@ -13,6 +13,7 @@ class MicroAdmin extends LeftAndMain
     private static $menu_title  = "Micro Admin";
 
     private static $extra_requirements_javascript = [
+        // swap to 'piral-app/dist/release/main.js' for debugging
         'piral-app/dist/release/main.js',
     ];
 

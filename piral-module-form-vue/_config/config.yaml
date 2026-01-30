@@ -1,0 +1,7 @@
+App\MicroAdmin:
+    pilets:
+        - name: 'piral_module_form-vue'
+          version: 1
+          link: '/_resources/piral-module-form-vue/dist/index.js'
+          requireRef: System.import
+          spec: v2

@@ -5,6 +5,9 @@
   "keywords": [
     "pilet"
   ],
+  "dependencies": {
+    "piral-core": "^1.9.2"
+  },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "^18",
@@ -34,8 +37,5 @@
       "test-app"
     ]
   },
-  "source": "src/index.tsx",
-  "dependencies": {
-    "piral-core": "^1.9.2"
-  }
+  "source": "src/index.tsx"
 }

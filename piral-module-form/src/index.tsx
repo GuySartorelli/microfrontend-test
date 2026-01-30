@@ -11,6 +11,7 @@ export function setup(app: PiletApi) {
       // @TODO pull this in from Silverstripe app
       title: '123',
       description: 'abc',
+      tickthis: 1,
     },
     onSubmit(data) {
       // @TODO submit to Silverstripe app
@@ -18,8 +19,20 @@ export function setup(app: PiletApi) {
       return Promise.resolve();
     },
   });
-  app.registerPage('/admin/microadmin/form', withForm((props) => <Form ExtensionComponent={app.Extension} {...props} />));
-
+  app.registerPage('/admin/microadmin/form', withForm((props) => <Form {...props} changeForm={(...args) => {
+    // For checkboxes, check the "checked" attribute of the target, not the "value" attribute.
+    if (args[0] instanceof Event && !args[0].target) {
+      console.log(args[0]);
+    }
+    if (args[0] instanceof Event && args[0].target.type === 'checkbox') {
+      const e = args[0];
+      // piral-forms only cares about these keys. For checkboxes the event.target.value isn't actually
+      // the checked status, so we have to give a shim event with the correct value.
+      args = [{ target: { name: e.target.name, value: e.target.checked } }];
+    }
+    props.changeForm(...args);
+  }} />));
+  // This label text extension is used to validate that we can nest react inside non-react inside react for a tasty sandwhich.
+  app.registerExtension('FormLabelText', ({ params: { title } }) => (<span>{title}</span>));
   app.registerMenu(() => <Link to="/admin/microadmin/form">Form Module</Link>);
-
 }

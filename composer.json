@@ -50,11 +50,12 @@
             "web.config"
         ],
         "expose": [
-            "piral-app/dist/release",
+            "piral-app/dist",
             "piral-module-one/dist",
             "piral-module-two/dist",
             "piral-module-form/dist",
-            "piral-module-form-textarea/dist"
+            "piral-module-form-textarea/dist",
+            "piral-module-form-vue/dist"
         ],
         "resources-dir": "_resources"
     }
